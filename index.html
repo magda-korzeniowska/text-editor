@@ -14,7 +14,7 @@
 
 <body>
 
-  <form class="editor" action="/add" method="POST" onSubmit="return setContent()">
+  <form class="editor" action="/add" method="POST">
     <div class="editor__toolbar">
       <button class="editor__button editor__button--bold" type="button" data-command="bold">
         <i class="fas fa-bold"></i>
@@ -27,6 +27,9 @@
       </button>
       <button class="editor__button editor__button--save" type="submit">
         SAVE
+      </button>
+      <button class="editor__button editor__button--load" type="button">
+        LOAD
       </button>
     </div>
     <textarea id="hidden-field" name="text" style="display:none"></textarea>

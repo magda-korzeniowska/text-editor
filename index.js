@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/add', (req, res) => {
-  // return res.redirect('/')
+  
   console.log(req.body);
 
   let data = JSON.stringify(req.body)
@@ -25,6 +25,14 @@ app.post('/add', (req, res) => {
       console.log(err.message);
     }
   })
-  res.send(req.body)
+  // res.redirect('/')
+  // res.send(req.body)
+});
+
+app.get('/text', (req, res) => {
+  let data = fs.readFileSync('text.json');
+  let text = JSON.parse(data);
+  console.log(text);
+  res.send(text)
 });
 
