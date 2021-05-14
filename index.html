@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -16,27 +18,33 @@
 
   <form class="editor" action="/add" method="POST">
     <div class="editor__toolbar">
-      <button class="editor__button editor__button--bold" type="button" data-command="bold">
+      <button class="editor__button editor__button--bold" type="button" data-command="bold" aria-label="bold">
+        <span class="editor__button-span">bold</span>
         <i class="fas fa-bold"></i>
       </button>
-      <button class="editor__button editor__button--italic" type="button" data-command="italic">
+      <button class="editor__button editor__button--italic" type="button" data-command="italic" aria-label="italic">
+        <span class="editor__button-span">italic</span>
         <i class="fas fa-italic"></i>
       </button>
-      <button class="editor__button editor__button--list" type="button" data-command="insertUnorderedList">
+      <button class="editor__button editor__button--list" type="button" data-command="insertUnorderedList"
+        aria-label="unordered list">
+        <span class="editor__button-span">list</span>
         <i class="fas fa-list-ul"></i>
       </button>
-      <button class="editor__button editor__button--save" type="submit">
-        SAVE
+      <button class="editor__button editor__button--save" type="submit" aria-label="save">
+        <span class="editor__button-span">save</span>
+        <i class="far fa-save"></i>
       </button>
-      <button class="editor__button editor__button--load" type="button">
-        LOAD
+      <button class="editor__button editor__button--load" type="button" aria-label="upload">
+        <span class="editor__button-span">upload</span>
+        <i class="fas fa-file-upload"></i>
       </button>
     </div>
     <textarea id="hidden-field" name="text" style="display:none"></textarea>
     <div class="editor__text" contenteditable="true"></div>
   </form>
 
-  <script src="script.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
 </body>
 
 </html>
