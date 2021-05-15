@@ -32,3 +32,12 @@ function loadText() {
   });
 };
 
+// adds "--pressed" class modifier to buttons
+setInterval(() => {
+  const cmds = ["bold", "italic", "insertUnorderedList"];
+  for (let i = 0; i < cmds.length; i++) {
+    document.queryCommandState(cmds[i])
+      ? editorBtns[i].classList.add('editor__button--pressed')
+      : editorBtns[i].classList.remove('editor__button--pressed');
+  }
+}, 100);

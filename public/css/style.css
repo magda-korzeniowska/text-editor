@@ -43,6 +43,10 @@ html {
 }
 
 .editor__button:active {
+  transform: scale(0.85);
+}
+
+.editor__button--pressed {
   background-color: #808080;
 }
 
