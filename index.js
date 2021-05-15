@@ -25,7 +25,7 @@ app.post('/add', (req, res) => {
   });
 });
 
-// reads data from file and send them to '/text' route
+// reads data from file and sends them to '/text' route
 app.get('/text', (req, res) => {
   const data = fs.readFileSync('./api/text.json');
   const text = JSON.parse(data);

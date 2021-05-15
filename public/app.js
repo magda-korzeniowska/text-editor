@@ -1,9 +1,9 @@
 const form = document.querySelector('.editor');
-const editBtns = document.querySelectorAll('[data-command]');
+const editorBtns = document.querySelectorAll('[data-command]');
 const loadBtn = document.querySelector('.editor__button--load');
 
 // runs commands that manipulate the current editable region
-Array.prototype.slice.call(editBtns).forEach(btn => btn.addEventListener('click', () => {
+Array.prototype.slice.call(editorBtns).forEach(btn => btn.addEventListener('click', () => {
   const command = btn.getAttribute('data-command');
   document.execCommand(command);
 }));
