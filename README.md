@@ -1,9 +1,9 @@
 # Text Editor
 
-A simple text editor with basic functionalities, with the ability to write and read text to a file in JSON format. 
+A simple text editor with basic functionalities, with the ability to write and read text to/from a file in JSON format. 
 The project was made in vanilla JS using the Express.js library.
 
-[LIVE PREVIEW](https://magda-text-editor.herokuapp.com//)
+[LIVE PREVIEW](https://magda-text-editor.herokuapp.com/)
 
 ## Installation
 1. Clone repository using:
